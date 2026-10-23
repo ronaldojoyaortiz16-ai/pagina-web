@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una carta para Dexi ❤️</title>
+    <meta name="description" content="Una carta de despedida y cariño para Dexi, antes de su cumpleaños.">
+    <link rel="stylesheet" href="../estilos/estilos.css?v=3">
+</head>
+
+<body>
+    <div class="flores flores-izquierda" aria-hidden="true">
+        <span>🎂🌼</span><span>🎂🌼</span><span>🎂🌼</span><span>🎂🌼</span>
+    </div>
+    <main class="contenedor">
+        <h1>❤️ Una carta para Dexi 🌼</h1>
+        <div class="corazon" aria-hidden="true">❤️</div>
+        <section class="carta">
+            <h2>Para Dexi, mi amiga 🌼</h2>
+            <p>Dexi:</p>
+            <p>Quise prepararte este pequeño espacio porque pronto empiezas una nueva etapa y quería que te llevaras
+                un recordatorio de todo el cariño que te tengo.</p>
+            <p>Me da un poquito de tristeza pensar que te vas, pero también me alegra que vengan cosas nuevas para ti.
+                Aunque estemos más lejos, la distancia no borra los buenos momentos ni el aprecio que siento por ti.
+                Voy a estar deseándote lo mejor en cada paso.</p>
+            <p>Y como dentro de un mes llega tu cumpleaños, también quería adelantarte un abrazo enorme. Cuando llegue
+                ese día, espero que esté lleno de alegría, momentos bonitos y todo lo que te haga feliz. ¡Ya habrá
+                tiempo para celebrarlo como se debe! 🎂</p>
+            <p>Gracias por tu amistad. Te voy a extrañar y siempre podrás contar conmigo. ❤️</p>
+            <div class="galeria-amor" aria-label="Nuestros recuerdos">
+                <figure>
+                    <img src="../img/img1.jpeg" alt="Un recuerdo especial">
+                </figure>
+                <figure>
+                    <img src="../img/Img2.jpeg" alt="Un momento para recordar">
+                </figure>
+                <figure>
+                    <img src="../img/img3.jpeg" alt="Un recuerdo compartido">
+                </figure>
+            </div>
+            <p><strong>Con mucho cariño, Ronaldo ❤️</strong></p>
+            <div class="corazon-final" aria-hidden="true">❤️</div>
+            <p class="flores-finales">🌼 🌼 🌼</p>
+        </section>
+        <audio id="cancion-dexi" class="song-media" autoplay preload="auto" aria-label="Canción para Dexi">
+            <source src="../musica/Tu cumpleaños.mpeg" type="audio/mpeg">
+        </audio>
+        <a href="../index.html" class="boton">❤️ Volver</a>
+    </main>
+    <script>
+        const cancion = document.querySelector('#cancion-dexi');
+        const intentarReproducir = () => {
+            cancion.play().catch(() => {
+                document.addEventListener('pointerdown', () => cancion.play(), { once: true });
+                document.addEventListener('keydown', () => cancion.play(), { once: true });
+            });
+        };
+
+        intentarReproducir();
+        cancion.addEventListener('error', () => {
+            console.error('No se pudo cargar musica/Tu cumpleaños.mpeg');
+        });
+    </script>
+</body>
+
+</html>
